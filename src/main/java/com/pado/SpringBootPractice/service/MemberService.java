@@ -3,12 +3,15 @@ package com.pado.SpringBootPractice.service;
 import com.pado.SpringBootPractice.domain.Member;
 import com.pado.SpringBootPractice.repository.MemberRepository;
 import com.pado.SpringBootPractice.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 // 실제 비즈니스 로직을 작성하는 부분. 저장소 관리하는 리포지토리와 연동해서
 // 서비스 로직 구현현// 서비스쪽은 비즈니스에 가까운 함수명을 지정해야한다.
+@Service // 스프링 컨테이너에서 관리하기 위한 어노테이션
 public class MemberService {
 
     // 멤버 서비스에서 만든 멤버 메모리 레퍼지토리랑
@@ -18,6 +21,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     // 이렇게 바꾸면 된다. 외부에서 멤버리포지토리를 넣어주도록 바꾸면된다.
+    @Autowired
     public MemberService(MemoryMemberRepository memoryMemberRepository){
         this.memberRepository = memoryMemberRepository;
     }
