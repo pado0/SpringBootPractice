@@ -4,6 +4,7 @@ import com.pado.SpringBootPractice.domain.Member;
 
 import java.util.*;
 
+// 저장소를 직접 왔다갔다.
 public class MemoryMemberRepository implements MemberRepository{
 
     // 실무에서는 동시성 문제를 고려해야하는데 일단 함
