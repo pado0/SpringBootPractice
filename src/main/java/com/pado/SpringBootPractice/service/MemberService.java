@@ -22,8 +22,8 @@ public class MemberService {
 
     // 이렇게 바꾸면 된다. 외부에서 멤버리포지토리를 넣어주도록 바꾸면된다.
     @Autowired
-    public MemberService(MemoryMemberRepository memoryMemberRepository){
-        this.memberRepository = memoryMemberRepository;
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
     }
 
 
