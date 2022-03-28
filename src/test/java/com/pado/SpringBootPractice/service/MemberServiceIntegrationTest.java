@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-@Transactional
+// transaction 어떻게 하지?
 class MemberServiceIntegrationTest {
 
     // tc는 생성자 인젝션까지 할 필요 없이.. 제일 간단하게 필드 인젝션 해줘도 된다
