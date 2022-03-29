@@ -6,11 +6,11 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 // 저장소를 직접 왔다갔다.
-@Repository
+//@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     // 실무에서는 동시성 문제를 고려해야하는데 일단 함
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member>  store = new HashMap<>();
     private static long sequence = 0L;
 
     @Override

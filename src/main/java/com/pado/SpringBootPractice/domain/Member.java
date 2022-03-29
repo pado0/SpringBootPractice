@@ -1,8 +1,15 @@
 package com.pado.SpringBootPractice.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "name") // 어노테이션들로 db와 맵핑
     private String name;
 
     public Long getId() {
